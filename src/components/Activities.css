@@ -1,0 +1,224 @@
+/* ==========================================
+   ACTIVITIES & HACKATHONS STYLES
+   ========================================== */
+
+.activities {
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* ---- Activity Card ---- */
+.activity-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.activity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-secondary), var(--accent), var(--accent-pink));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.activity-card:hover::before {
+  opacity: 1;
+}
+
+.activity-card:hover {
+  border-color: rgba(167, 139, 250, 0.3);
+}
+
+.activity-card.featured {
+  border-color: rgba(167, 139, 250, 0.25);
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.06),
+    rgba(167, 139, 250, 0.04),
+    rgba(236, 72, 153, 0.03)
+  );
+}
+
+/* ---- Featured Badge ---- */
+.featured-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: linear-gradient(135deg, var(--accent-secondary), var(--accent));
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---- Icon ---- */
+.activity-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ---- Type Badge ---- */
+.activity-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+}
+
+.type-icon {
+  font-size: 0.7rem;
+}
+
+/* ---- Title ---- */
+.activity-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+/* ---- Meta (date + location) ---- */
+.activity-meta {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.meta-item svg {
+  color: var(--accent);
+  font-size: 0.7rem;
+}
+
+/* ---- Description ---- */
+.activity-description {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+/* ---- Tags ---- */
+.activity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.activity-tag {
+  background: rgba(167, 139, 250, 0.08);
+  color: var(--accent);
+  padding: 0.25rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.73rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+}
+
+/* ---- View Certificate Button ---- */
+.view-certificate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+  padding: 0.55rem 1.2rem;
+  background: linear-gradient(135deg, var(--accent-secondary), var(--accent));
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.view-certificate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(167, 139, 250, 0.35);
+}
+
+.view-certificate-btn svg {
+  font-size: 0.9rem;
+}
+
+/* ---- CTA Banner ---- */
+.activities-cta {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.cta-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+}
+
+.cta-icon {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .activities {
+    padding: 4rem 1.2rem;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cta-text {
+    font-size: 0.85rem;
+    padding: 0.8rem 1.2rem;
+    flex-direction: column;
+  }
+}

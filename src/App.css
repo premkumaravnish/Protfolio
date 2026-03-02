@@ -1,0 +1,11 @@
+/* ==========================================
+   APP.CSS — App-level styles
+   ==========================================
+   Minimal styles for the root app container.
+   Each component has its OWN CSS file (modular approach).
+   ========================================== */
+
+.app {
+  min-height: 100vh;
+  position: relative;
+}
