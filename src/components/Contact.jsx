@@ -17,7 +17,7 @@ import './Contact.css';
 
 const socials = [
   { icon: <FaGithub />, name: 'GitHub', url: 'https://github.com/premkumaravnish', color: '#a78bfa' },
-  { icon: <FaLinkedin />, name: 'LinkedIn', url: 'https://linkedin.com/in/your-linkedin', color: '#6366f1' },
+  { icon: <FaLinkedin />, name: 'LinkedIn', url: 'www.linkedin.com/in/prem-avnish', color: '#6366f1' },
   { icon: <FaTwitter />, name: 'Twitter', url: 'https://twitter.com/your-twitter', color: '#ec4899' },
   { icon: <HiOutlineMail />, name: 'Email', url: 'mailto:premkavnish@gmail.com', color: '#22d3ee' },
 ];
